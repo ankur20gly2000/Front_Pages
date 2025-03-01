@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imgS{
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            margin: 10px;
+            border: 5px solid rgb(18, 118, 118);
+        }
+        #modal{
+            height: 650px;
+            width: 100%;
+            background: rgb(0,0,0,.5);
+            position: fixed;
+            top: 0px;
+            display: none;
+        }
+        #inner{
+            min-height: 400px;
+            width: 500px;
+            background: white;
+            margin: 60px auto;
+            padding: 10px;
+        }
+        #inner img{
+            width: 100%;
+            height: 90%;
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="images/a1.jpg" onclick="demo(this)" class="imgS" alt="">
+    <img src="images/a20.jpg" onclick="demo(this)" class="imgS" alt=""><br/>
+    <img src="images/a18.jpg" onclick="demo(this)" class="imgS" alt="">
+    <img src="images/a19.jpg" onclick="demo(this)" class="imgS" alt="">
+    <div id="modal">
+        <div id="inner">
+            <a href="demo4.html">click</a>
+            <h1>Welcome Image</h1>
+            <img src="images/a4.jpg" id="imgBig" alt="">
+        </div>
+    </div>
+    <script>
+        function demo(x)
+        {
+            document.querySelector("#modal").style.display="block"
+            document.querySelector("#imgBig").src=x.src
+        }
+       
+    </script>
+</body>
+</html>
